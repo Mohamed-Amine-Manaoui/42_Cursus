@@ -1,38 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 21:17:16 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/01 21:23:13 by mmanaoui         ###   ########.fr       */
+/*   Created: 2023/11/01 21:38:33 by mmanaoui          #+#    #+#             */
+/*   Updated: 2023/11/01 21:40:36 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_atoi(const char *str)
 {
 	size_t	i;
+	size_t	sign;
+	size_t	result;
 
 	i = 0;
-	while (i < n)
+	sign = 1;
+	while ((str[i] == 32 || (str[i] >= 9 && str[i] <= 13)) && str[i])
+		i++;
+	if (str[i] == '-')
 	{
-		if (((char *)s1)[i] != ((char *)s2)[i])
-			return (((char *)s1)[i] - ((char *)s2)[i]);
+		sign = -1;
 		i++;
 	}
-	return (0);
+	else if (str[i] == '+')
+		i++;
+	result = 0;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 /*
 int main() {
-    char str1[] = "bello, World!";
-    char str2[] = "aello, Universe!";
-    size_t num = 7;
+    const char *str = "-+12345";
+    int number = ft_atoi(str);
 
-    int result = ft_memcmp(str1, str2, num);
-    printf("%d",result);
+    printf("Parsed integer: %d\n", number);
+
     return 0;
 }
 */
