@@ -1,15 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/04 09:19:43 by mmanaoui          #+#    #+#             */
+/*   Updated: 2023/11/04 09:27:08 by mmanaoui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_calloc(size_t num, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
-    if (num == 0 || size == 0)
-    return NULL;
-    int *ptr;
+	int	*ptr;
 
-    ptr = malloc(size * num);
-    if (ptr != 0)
-    {
-        ft_bzero(ptr,size * num);
-    }
-    return ptr
+	ptr = malloc(size * num);
+	if (ptr != 0)
+		ft_bzero(ptr, size * num);
+	return (ptr);
 }
