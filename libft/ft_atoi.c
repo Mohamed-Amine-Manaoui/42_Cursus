@@ -65,10 +65,6 @@ int main() {
     return 0;
 }
 */
-
-
-
-
 /*
 
 void skip_norme(char *ptr, int size, int sign ,int n)
