@@ -6,7 +6,7 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:43:02 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/03 12:43:58 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:36:08 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (big == NULL || little == NULL)
-		return (0);
+	if (big == NULL && little == NULL)
+		return (NULL	);
 	if (little[j] == '\0')
 	{
 		return ((char *)big);
 	}
 	while (big[i])
 	{
-		while (i < len && big[i + j] != '\0' && big[i + j] == little[j])
+		while (i + j < len && big[i + j] != '\0' && big[i + j] == little[j])
 		{
 			j++;
 		}
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 		j = 0;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int main ()
