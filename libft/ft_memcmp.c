@@ -6,7 +6,7 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:17:16 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/13 17:24:59 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/16 11:37:28 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,21 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (ptr1[i] - ptr2[i]);
 }
-
+/*
+#include <string.h>
 int main() {
     // Test cases
 
     // Test case 1: Equal strings
     const char *str1 = "Hellb";
     const char *str2 = "Hella";
-    int result1 = ft_memcmp(str1, str2, 5);
+    int result1 = ft_memcmp("s", "w", 5);
+	int result2 = memcmp ("s", "w", 5);
     printf("Test case 1: %d\n", result1); // Expected output: 0
-
+	printf("Test case 2: %d\n", result2);
+}
+*/
+	/*
     // Test case 2: Different strings, str1 < str2
     const char *str3 = "Apple";
     const char *str4 = "Banana";
@@ -63,3 +68,4 @@ int main() {
 
     return 0;
 }
+*/
