@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 12:01:17 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/17 11:55:49 by mmanaoui         ###   ########.fr       */
+/*   Created: 2023/11/17 11:58:34 by mmanaoui          #+#    #+#             */
+/*   Updated: 2023/11/17 12:57:06 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
-	size_t	slen;
-
-	i = 0;
-	j = 0;
-	slen = ft_strlen(src);
-	while (dest[i] && i < size)
+	t_list *last;
+	if (*lst == NULL)
 	{
-		i++;
+		*lst = new;
+		return;
 	}
-	if (i == size)
-	{
-		return (i + slen);
-	}
-	while (src[j] && (i + j) < size - 1)
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (i + slen);
+	last = *lst;
+while (last->next != NULL)
+	last = last->next;
+	last->next = new;
 }
