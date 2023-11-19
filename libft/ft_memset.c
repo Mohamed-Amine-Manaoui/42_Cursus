@@ -6,12 +6,12 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:32:23 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/01 11:01:03 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:20:46 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
+#include <string.h>
 void	*ft_memset(void *str, int value, size_t n)
 {
 	size_t	i;
@@ -27,8 +27,9 @@ void	*ft_memset(void *str, int value, size_t n)
 /*
 int main ()
 {
-    char a[] = "amine";
-    memset(a, 'a', 3);
-    printf("%s", a);
+	int *arr[2] = {0, 0};
+
+    memset(arr, 2, 1);
+    printf("%d\n", arr);
 }
 */

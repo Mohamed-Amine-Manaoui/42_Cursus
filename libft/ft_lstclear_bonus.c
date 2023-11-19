@@ -1,47 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 14:52:08 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/19 14:09:27 by mmanaoui         ###   ########.fr       */
+/*   Created: 2023/11/19 13:40:36 by mmanaoui          #+#    #+#             */
+/*   Updated: 2023/11/19 18:41:23 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*typedef struct s_list
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	void *content;
-	struct s_list *next;
-} t_list;
-*/
-t_list *ft_lstnew(void *content)
-{
-	t_list *ptr;
+	if (lst && del)
+	{
+	t_list *temp;
+	t_list *next_node;
 
-	ptr = (t_list *)malloc(sizeof(t_list));
-	if (ptr == NULL)
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	temp = *lst;
+	while (temp != NULL)
+	{
+	   next_node = temp->next;
+	   del(temp->content);
+	   free(temp);
+	   temp = next_node;
+	}
+	*lst = NULL;
+	}
 }
-/*
-int main ()
-{
-	t_list *head = ft_lstnew(NULL);
-	printf("%s",head->content);
-}
-*/
-
-
-
-
-
-
-
-
-

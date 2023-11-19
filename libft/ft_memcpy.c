@@ -6,34 +6,40 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:17:37 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/18 15:30:47 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/19 20:45:11 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if ((char *)dest == (char *)src)
-		return ((char *)src);
+	// if (dest == src)
+	// 	return (src);
 	if (!dest && !src)
 		return (NULL);
 	while (i < n)
 	{
-		((char *)dest)[i] = ((const char *)src)[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
 	return (dest);
 }
-/*
-int main ()
-{
-    char src[] = "amine";
-    char dest[10];
-    ft_memcpy(dest, src, 3);
-    printf("%s",dest);
-}
-*/
+
+// int main ()
+// {
+//     char *src = "12344949=7";
+//     char dest[10];
+//     ft_memcpy(dest, src, 8);
+//     printf("%s\n",dest);
+
+// 	char *src1 = "12344949=7";
+//     char dest1[10];
+//     memcpy(dest1, src1, 8);
+//     printf("%s",dest1);
+// }
+
