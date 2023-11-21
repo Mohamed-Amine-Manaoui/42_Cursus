@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (lst != NULL)
@@ -27,23 +27,26 @@ int ft_lstsize(t_list *lst)
 /*
 int main ()
 {
-	t_list *node1 = (t_list *)malloc(sizeof(t_list));
-	t_list *node2 = (t_list *)malloc(sizeof(t_list));
-	t_list *node3 = (t_list *)malloc(sizeof(t_list));
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*head;
+	int		size;
 
+	node1 = (t_list *)malloc(sizeof(t_list));
+	node2 = (t_list *)malloc(sizeof(t_list));
+	node3 = (t_list *)malloc(sizeof(t_list));
 	node1->next = node2;
 	node2->next = node3;
 	node3->next = NULL;
-
 	node1->content = "kpascn";
 	node2->content = "er;gegw";
 	node3->content = "wbfwwg";
-
-	t_list *head = node1;
-	int size = ft_lstsize(head);
+	head = node1;
+	size = ft_lstsize(head);
 	printf("%d",size);
 	free(node1);
-    free(node2);
-    free(node3);
+	free(node2);
+	free(node3);
 }
 */

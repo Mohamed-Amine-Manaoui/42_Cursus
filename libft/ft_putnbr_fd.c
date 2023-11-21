@@ -9,8 +9,8 @@
 /*   Updated: 2023/11/13 17:57:28 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <fcntl.h>
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putchar(char c, int fd)
 {
@@ -26,16 +26,14 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n < 0)
 	{
 		ft_putchar('-', fd);
-		n = -n ;
+		n = -n;
 		ft_putnbr_fd(n, fd);
 	}
-
 	else if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
-	
 	else if (n >= 0 && n <= 9)
 	{
 		ft_putchar(n + 48, fd);
@@ -43,24 +41,23 @@ void	ft_putnbr_fd(int n, int fd)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    // Create a file and obtain a file descriptor
-    int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC);
+	int	fd;
+	int	number;
 
-    if (fd == -1)
-    {
-        ft_putchar('E'); // Print an error if opening the file fails
-        return 1; // Return an error code
-    }
-
-    // Example usage of ft_putnbr_fd with the created file descriptor
-    int number = -47;
-    ft_putnbr_fd(number, fd);
-
-    // Close the file descriptor
-    close(fd);
-
-    return 0;
+	// Create a file and obtain a file descriptor
+	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC);
+	if (fd == -1)
+	{
+		ft_putchar('E'); // Print an error if opening the file fails
+		return (1); // Return an error code
+	}
+	// Example usage of ft_putnbr_fd with the created file descriptor
+	number = -47;
+	ft_putnbr_fd(number, fd);
+	// Close the file descriptor
+	close(fd);
+	return (0);
 }
 */

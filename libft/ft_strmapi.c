@@ -19,10 +19,11 @@
 	return (b);
 }
 */
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int i;
-	char 	*ptr;
+	unsigned int	i;
+	char			*ptr;
+
 	if (!s && !f)
 		return (NULL);
 	ptr = (char *)malloc(ft_strlen(s) + 1);
@@ -31,24 +32,24 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		ptr[i] = f(i,s[i]);
+		ptr[i] = f(i, s[i]);
 		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
 }
 /*
-int main() {
-    const char *input_string = "Hello, World!";
+int	main(void) {
+	const char *input_string = "Hello, World!";
 
-    char *result = ft_strmapi(input_string, ft_ftest);
+	char *result = ft_strmapi(input_string, ft_ftest);
 
 
-    printf("Chaîne d'origine : %s\n", input_string);
-    printf("Nouvelle chaîne   : %s\n", result);
+	printf("Chaîne d'origine : %s\n", input_string);
+	printf("Nouvelle chaîne   : %s\n", result);
 
-    free(result);
+	free(result);
 
-    return 0;
+	return (0);
 }
 */

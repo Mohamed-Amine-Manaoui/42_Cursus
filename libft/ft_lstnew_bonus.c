@@ -12,15 +12,9 @@
 
 #include "libft.h"
 
-/*typedef struct s_list
+t_list	*ft_lstnew(void *content)
 {
-	void *content;
-	struct s_list *next;
-} t_list;
-*/
-t_list *ft_lstnew(void *content)
-{
-	t_list *ptr;
+	t_list	*ptr;
 
 	ptr = (t_list *)malloc(sizeof(t_list));
 	if (ptr == NULL)
@@ -32,16 +26,9 @@ t_list *ft_lstnew(void *content)
 /*
 int main ()
 {
-	t_list *head = ft_lstnew(NULL);
+	t_list	*head;
+
+	head = ft_lstnew(NULL);
 	printf("%s",head->content);
 }
 */
-
-
-
-
-
-
-
-
-

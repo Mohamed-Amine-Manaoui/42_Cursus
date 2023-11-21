@@ -13,13 +13,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef	struct	s_list
+typedef struct s_list
 {
-	int *data;
-	struct s_list *next;
-} t_list;
+	int				*data;
+	struct s_list	*next;
+}					t_list;
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -30,28 +30,28 @@ t_list *ft_lstlast(t_list *lst)
 	return (lst);
 }
 /*
-int main() {
-    t_list *node1 = (t_list *)malloc(sizeof(t_list));
-    t_list *node2 = (t_list *)malloc(sizeof(t_list));
-    t_list *node3 = (t_list *)malloc(sizeof(t_list));
+int	main(void) {
+	t_list *node1 = (t_list *)malloc(sizeof(t_list));
+	t_list *node2 = (t_list *)malloc(sizeof(t_list));
+	t_list *node3 = (t_list *)malloc(sizeof(t_list));
 
-    node1->data = 10;
-    node1->next = node2;
+	node1->data = 10;
+	node1->next = node2;
 
-    node2->data = 20;
-    node2->next = node3;
+	node2->data = 20;
+	node2->next = node3;
 
-    node3->data = 30;
-    node3->next = NULL;
+	node3->data = 30;
+	node3->next = NULL;
 
-    t_list *lastNode = ft_lstlast(node1);
+	t_list *lastNode = ft_lstlast(node1);
 
-        printf("Dernier élément de la liste : %d\n", lastNode->data);
+		printf("Dernier élément de la liste : %d\n", lastNode->data);
 
-    free(node1);
-    free(node2);
-    free(node3);
+	free(node1);
+	free(node2);
+	free(node3);
 
-    return 0;
+	return (0);
 }
 */

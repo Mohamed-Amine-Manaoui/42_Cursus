@@ -12,26 +12,27 @@
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)
-	new->next = *lst;
+		new->next = *lst;
 	*lst = new;
-
 }
 /*
 int main ()
 {
-	t_list *head;
+	t_list	*head;
+	t_list	*new_node;
+	t_list	*temp;
 
 	head = (t_list *)malloc(sizeof(t_list));
 	head->content = "im head";
 	head->next = NULL;
-	t_list *new_node = 	(t_list *) malloc(sizeof(t_list));
+	new_node = (t_list *) malloc(sizeof(t_list));
 	new_node->content = "test";
 	new_node->next = NULL;
 	ft_lstadd_front(&head, new_node);
-	t_list *temp = head;
+	temp = head;
 	while (temp)
 	{
 		printf("->   %s\n", temp->content);

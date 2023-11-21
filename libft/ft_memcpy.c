@@ -6,20 +6,17 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:17:37 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/19 20:45:11 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:46:40 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	// if (dest == src)
-	// 	return (src);
 	if (!dest && !src)
 		return (NULL);
 	while (i < n)
@@ -42,4 +39,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 //     memcpy(dest1, src1, 8);
 //     printf("%s",dest1);
 // }
-

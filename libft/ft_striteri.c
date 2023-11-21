@@ -17,28 +17,25 @@
 		*b -= 32;
 }
 */
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		 f(i, &s[i]);
-		 i++;
+		f(i, &s[i]);
+		i++;
 	}
 }
 /*
-int main()
+int	main(void)
 {
-    char str[] = "Hello, World!";
+	char	str[] = "Hello, World!";
 
-    printf("Original string: %s\n", str);
-
-    ft_striteri(str, ft);
-
-    printf("Modified string: %s\n", str);
-
-    return 0;
+	printf("Original string: %s\n", str);
+	ft_striteri(str, ft);
+	printf("Modified string: %s\n", str);
+	return (0);
 }
 */

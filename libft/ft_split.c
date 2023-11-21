@@ -12,76 +12,76 @@
 
 #include "libft.h"
 
-static int    ft_count(const char *s, char c)
+static int	ft_count(const char *s, char c)
 {
-    size_t    count;
-    size_t    i;
+	size_t	count;
+	size_t	i;
 
-    count = 0;
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            count++;
-            while (s[i] && s[i] != c)
-                i++;
-        }
-        else if (s[i] == c)
-            i++;
+	count = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		else if (s[i] == c)
+			i++;
 	}
-    return (count);
+	return (count);
 }
 
-static char    **ft_checknull(char **str, int n)
+static char	**ft_checknull(char **str, int n)
 {
-    while (n > 0)
-    {
-        free(str[--n]);
-    }
-    free(str);
-    return (0);
+	while (n > 0)
+	{
+		free(str[--n]);
+	}
+	free(str);
+	return (0);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int        i;
-    int        n;
-    int        j;
-    char    **str;
+	int		i;
+	int		n;
+	int		j;
+	char	**str;
 
-    str = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
-    if (str == NULL)
-        return (NULL);
-    i = 0;
-    n = 0;
-    while (s[i] != '\0')
-    {
-        while (s[i] == c)
-            i++;
-        if (s[i] == '\0')
-            break ;
-        j = 0;
-        while (s[i] != c && s[i] != '\0' && j++ > -1)
-            i++;
-        str[n++] = ft_substr(s, i - j, j);
-        if (!str[n - 1])
-            return (ft_checknull(str, n));
-    }
-    str[n] = NULL;
-    return (str);
+	str = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	n = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] == '\0')
+			break ;
+		j = 0;
+		while (s[i] != c && s[i] != '\0' && j++ > -1)
+			i++;
+		str[n++] = ft_substr(s, i - j, j);
+		if (!str[n - 1])
+			return (ft_checknull(str, n));
+	}
+	str[n] = NULL;
+	return (str);
 }
 /*int main()
 {
-    char *test = "hello world";
-    char ptr = ' ';
-    char **test2 = ft_split(test, ptr);
-    int i = 0;
-    while (test2[i] != NULL)
-    {
-        printf("%s\n", test2[i]);
-        i++;
-    }
+	char *test = "hello world";
+	char ptr = ' ';
+	char **test2 = ft_split(test, ptr);
+	int i = 0;
+	while (test2[i] != NULL)
+	{
+		printf("%s\n", test2[i]);
+		i++;
+	}
 
-    return 0;
+	return (0);
 }*/

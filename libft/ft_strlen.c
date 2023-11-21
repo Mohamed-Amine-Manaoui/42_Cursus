@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <string.h>
+
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
@@ -22,12 +23,12 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 /*
-int main() {
-    const char *myString = "";
+int	main(void) {
+	const char *myString = "";
 	size_t length = strlen(myString);
 	size_t length1 = ft_strlen(myString);
-    printf("The length (orig) of the string is: %zu\n", length);
+	printf("The length (orig) of the string is: %zu\n", length);
 	printf("The length1 of the string is: %zu\n", length1);
-    return 0;
+	return (0);
 }
 */

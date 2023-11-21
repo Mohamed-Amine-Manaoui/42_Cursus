@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <string.h>
+
 void	*ft_memset(void *str, int value, size_t n)
 {
 	size_t	i;
@@ -27,9 +28,9 @@ void	*ft_memset(void *str, int value, size_t n)
 /*
 int main ()
 {
-	int *arr[2] = {0, 0};
+	int	*arr[2] = {0, 0};
 
-    memset(arr, 2, 1);
-    printf("%d\n", arr);
+	memset(arr, 2, 1);
+	printf("%d\n", arr);
 }
 */
