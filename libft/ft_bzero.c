@@ -16,11 +16,4 @@ void	ft_bzero(void *str, size_t n)
 {
 	ft_memset(str, 0, n);
 }
-/*
-int main ()
-{
-    char a[] = "amine";
-    ft_bzero(a,sizeof(a));
-    printf("%s", a);
-}
-*/
+

@@ -6,7 +6,7 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 14:46:33 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/18 15:34:05 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:41:12 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,3 @@ char	**ft_split(char const *s, char c)
 	str[n] = NULL;
 	return (str);
 }
-/*int main()
-{
-	char *test = "hello world";
-	char ptr = ' ';
-	char **test2 = ft_split(test, ptr);
-	int i = 0;
-	while (test2[i] != NULL)
-	{
-		printf("%s\n", test2[i]);
-		i++;
-	}
-
-	return (0);
-}*/

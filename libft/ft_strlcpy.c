@@ -32,17 +32,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (leng);
 }
-/*
-int main() {
-    char dest[20]; 
-    const char *src = "Bonjour, monde !"; 
-    size_t size = 10;
-
-    size_t copied = strlcpy(dest, src, size);
-
-    printf("Chaine copiee : %s\n", dest);
-    printf("Longueur de la chaine source : %zu\n", copied);
-
-    return 0;
-}
-*/

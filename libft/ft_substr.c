@@ -19,6 +19,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s || start >= ft_strlen(s) || len == 0)
 		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
@@ -32,15 +34,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int main()
-{
-    const char *original = "Salam Ana Mohamed Amine";
-    unsigned int start = 7;
-    size_t length = 3;
-
-    char *result = ft_substr(original, start, length);
-    printf("%s",result);
-    return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:55:51 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/01 11:33:16 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:21:08 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_isascii(int c)
 int main ()
 {
     char a = '.';
-    printf("%d",ft_isalpha(a));
+    printf("%d",ft_isascii(a));
 }
 */

@@ -6,7 +6,7 @@
 /*   By: mmanaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:01:44 by mmanaoui          #+#    #+#             */
-/*   Updated: 2023/11/19 08:31:27 by mmanaoui         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:22:52 by mmanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-int	main(void) {
-	const char *myString = "";
-	size_t length = strlen(myString);
-	size_t length1 = ft_strlen(myString);
-	printf("The length (orig) of the string is: %zu\n", length);
-	printf("The length1 of the string is: %zu\n", length1);
-	return (0);
-}
-*/

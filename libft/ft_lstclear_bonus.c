@@ -30,3 +30,24 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = NULL;
 	}
 }
+// void del(void *ptr)
+// {
+// 	free(ptr);
+// }
+// int main ()
+// {
+// 	t_list	*head;
+// 	t_list	*new_node;
+// 	t_list	*temp;
+
+// 	head = (t_list *)malloc(sizeof(t_list));
+
+// 	head->content = ft_strdup("im head");
+// 	head->next = NULL;
+// 	new_node = (t_list *) malloc(sizeof(t_list));
+// 	new_node->content = ft_strdup("test");
+// 	new_node->next = NULL;
+// 	ft_lstadd_front(&head, new_node);
+// 	ft_lstclear(&head, del);
+// }
+	

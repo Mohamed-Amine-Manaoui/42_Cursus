@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-	while (i < n -1 && ((unsigned char *)ptr1)[i] == ((unsigned char *)ptr2)[i])
+	while (i < n - 1 && ((unsigned char *)ptr1)[i] == ((unsigned char *)ptr2)[i])
 		i++;
 	return (ptr1[i] - ptr2[i]);
 }
@@ -52,7 +52,7 @@ int main() {
     const char *str5 = "Car";
     const char *str6 = "Bus";
     int result3 = ft_memcmp(str5, str6, 3);
-    printf("Test case 3: %d\n", result3); // Expected output: a positive value
+    printf("Test case 3: %d\n", result3); 
 
     // Test case 4: Comparing parts of a longer string
     const char *str7 = "Hello World";

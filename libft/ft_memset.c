@@ -20,17 +20,8 @@ void	*ft_memset(void *str, int value, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *)str)[i] = (char)value;
+		((unsigned char *)str)[i] = (unsigned char)value;
 		i++;
 	}
 	return (str);
 }
-/*
-int main ()
-{
-	int	*arr[2] = {0, 0};
-
-	memset(arr, 2, 1);
-	printf("%d\n", arr);
-}
-*/

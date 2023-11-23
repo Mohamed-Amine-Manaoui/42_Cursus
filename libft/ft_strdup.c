@@ -17,7 +17,7 @@ char	*ft_strdup(const char *src)
 	char	*dest;
 	size_t	i;
 
-	dest = (char *) malloc((ft_strlen(src) + 1));
+	dest = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;
@@ -28,24 +28,16 @@ char	*ft_strdup(const char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-	free(dest);
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
-int main() {
-    const char *original = "Hello, World!";
-    char *duplicate = ft_strdup(original);
+// #include <stdio.h>
+// #include <string.h>
 
-    if (duplicate != NULL) {
-        printf("Original: %s\n", original);
-        printf("Duplicate: %s\n", duplicate);
+// int main() {
+//     const char *original = NULL;
 
-    } else {
-        printf("Memory allocation for duplicate failed.\n");
-    }
+//         printf("Original: %s\n", ft_strdup(original));
+//         //printf("(or)Duplicate: %s\n", strdup(original));
 
-    return 0;
-}
-*/
+//     return (0);
+// }
