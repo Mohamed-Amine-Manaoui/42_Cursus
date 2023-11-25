@@ -10,20 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;
 	return (c);
 }
-/*
-int main() {
-    char lowercaseChar = 'q';
-    char uppercaseChar = ft_toupper(lowercaseChar);
-    
-    printf("Caractère en minuscule : %c\n", lowercaseChar);
-    printf("Caractère en majuscule : %c\n", uppercaseChar);
 
-    return 0;
-}
-*/
+// int main ()
+// {
+//     int c = 'z';
+//     int d = ft_toupper(c);
+//     printf("%c",d);
+// }

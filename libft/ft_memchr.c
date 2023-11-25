@@ -23,24 +23,13 @@ void	*ft_memchr(const void *str, int c, size_t n)
 			return ((unsigned char *)str + i);
 		i++;
 	}
-	return (0);
-}
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    const char myMemoryBlock[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-    int targetValue = 5;
-
-    void *result = memchr(myMemoryBlock, targetValue, sizeof(myMemoryBlock));
-        size_t position = (size_t)((char *)result - myMemoryBlock) + 1;
-
-        printf("The byte with value %d was found at position %zu.\n", targetValue, position);
-    }
-
-    return 0;
+	return (NULL);
 }
 
-   */
+// int main()
+// {
+// 	char *str = "amine";
+// 	char chr = 'i';
+// 	char *ptr = ft_memchr(str,chr,5);
+// 	printf("%s",ptr);
+// }

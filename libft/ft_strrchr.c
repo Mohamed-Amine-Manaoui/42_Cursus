@@ -27,3 +27,11 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)(str + i));
 	return (0);
 }
+
+int main ()
+{
+	char *str = "Amine";
+	char c = 'i';
+	char *ptr = ft_strrchr(str, c);
+	printf("%s",ptr);
+}

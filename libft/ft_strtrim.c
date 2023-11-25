@@ -25,20 +25,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr((char *)s1, 0, i + 1));
 }
-/*
- 
- const char *originalString = "   Hello, World!   ";
-    const char *setOfCharsToTrim = " ";
-
-    // Call ft_strtrim to get a trimmed string
-    char *trimmedString = ft_strtrim(originalString, setOfCharsToTrim);
-
-    if (trimmedString != NULL) {
-        // Print the trimmed string
-        printf("Original: \"%s\"\n", originalString);
-        printf("Trimmed:  \"%s\"\n", trimmedString);
-
-        // Free the allocated memory for the trimmed string
-        free(trimmedString);
-
-  */
+// int main ()
+// {
+//     char s1[] = "1234Mohamed Amine";
+//     char set[] = "123";
+//     char *str = ft_strtrim(s1, set);
+//     printf("%s",str);
+// }

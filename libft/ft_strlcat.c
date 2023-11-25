@@ -39,10 +39,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + j] = '\0';
 	return (i + slen);
 }
-// #include <string.h>
 
-// int	main(void)
+// int main ()
 // {
-// 	// printf("%lu\n",strlcat(NULL,"amin",0));
-// 	printf("%lu\n", ft_strlcat(NULL, "amin", 0));
+// 	char *src = "Mohamed ";
+//  	char dest[] = "Amine";
+//  	size_t str = ft_strlcat(dest, src, sizeof(dest));
+// 	printf("%zu\n",str);
 // }

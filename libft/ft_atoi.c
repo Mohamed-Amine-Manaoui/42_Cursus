@@ -37,64 +37,17 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
-
-int main() {
-    int num = 12345; // Chiffre de test
-    char *str = ft_itoa(num);
-
-    if (str != NULL) {
-        printf("Nombre: %d\nChaîne: %s\n", num, str);
-        free(str); // Assurez-vous de libérer la mémoire allouée
-    } else {
-        printf("Erreur d'allocation mémoire.\n");
-    }
-
-    return 0;
-}
-*/
-/*
-
-void skip_norme(char *ptr, int size, int sign ,int n)
+int main ()
 {
-       int  i;
-    i = size - 1;
-	ptr[i + 1] = '\0';
-	while (i >= 0)
-	{
-		ptr[i] = '0' + (n % 10);
-		n /= 10;
-		i--;
-	}
-	if (ptr[i] == '-')
-			ptr[0] = '-';
-}
-char	*ft_itoa(int n)
-{
-	int		sign;
-	int		temp;
-	int		size;
-	char	*ptr;
- 
-	sign = 1;
-	if (n < 0)
-	{
-		sign = -1;
-		n = -n;
-	}
-	temp = n;
-	size = 1;
-	while (temp > 9)
-	{
-		temp /= 10;
-		size++;
-	}
-	ptr = (char *)malloc(size + 2);
-	if (ptr == NULL)
-		return (0);
-            skip_norme(ptr, size, sign, n);
-	return (ptr);
+	char str[] = " 					 	    -2147483648						    	 	 	 		 	 	 	 	";
+	int a = ft_atoi(str);
+	int b = atoi(str);
+	printf("%d\n",a);
+	printf("%d\n",b);
+
 }
 */

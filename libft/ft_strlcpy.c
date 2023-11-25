@@ -32,3 +32,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (leng);
 }
+
+// int main ()
+// {
+// 	char *src = "Mohamed Amine";
+//  	char dest[20];
+//  	size_t str = ft_strlcpy(dest, src, sizeof(dest));
+// 	printf("----->%zu\n",str);
+// }

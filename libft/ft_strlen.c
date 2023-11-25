@@ -22,3 +22,9 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+// int main ()
+// {
+// 	char str[] = "Amine";
+// 	size_t a = ft_strlen(str);
+// 	printf("%zu",a);
+// }

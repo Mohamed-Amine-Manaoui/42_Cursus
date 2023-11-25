@@ -30,14 +30,12 @@ char	*ft_strdup(const char *src)
 	return (dest);
 }
 
-// #include <stdio.h>
-// #include <string.h>
-
-// int main() {
-//     const char *original = NULL;
-
-//         printf("Original: %s\n", ft_strdup(original));
-//         //printf("(or)Duplicate: %s\n", strdup(original));
-
-//     return (0);
+// int main()
+// {
+// 	char *src = NULL;
+// 	char *dest = ft_strdup(src);
+// 	char *srcn = NULL;
+// 	char *destn = strdup(srcn);
+// 	printf("%s\n",dest);
+// 	printf("%s\n",destn);
 // }

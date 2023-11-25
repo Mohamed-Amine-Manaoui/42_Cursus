@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-/*void ft(unsigned int a, char *b)
+void ft(unsigned int a, char *b)
 {
 	if (*b >= 'a' && *b <= 'z')
 		*b -= 32;
 }
-*/
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
@@ -29,3 +29,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+// int main ()
+// {
+// 	char *s = NULL;
+// 	ft_striteri(s,ft);
+// 	printf("%s",s);
+// }

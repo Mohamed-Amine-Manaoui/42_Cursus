@@ -17,8 +17,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
 	if (dest == src)
 		return (dest);
 	while (i < n)
@@ -28,3 +26,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int main ()
+// {
+// 	char dest[] = {0,0,0,0,0};
+// 	char *src = "amine";
+// 	char *str = ft_memcpy(dest, src,3);
+// 	printf("%s",str);
+// }

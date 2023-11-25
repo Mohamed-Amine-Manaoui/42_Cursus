@@ -12,20 +12,22 @@
 
 #include "libft.h"
 
-/*char ft_ftest(unsigned int a, char b)
+char ft_ftest(unsigned int a, char b)
 {
 	if (b >= 'a' && b <= 'z')
 		return (b - 32);
 	return (b);
 }
-*/
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*ptr;
 
-	if (!s || !f)
+	if (!f || !s )
+	{
 		return (NULL);
+	}
 	ptr = (char *)malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (NULL);
@@ -38,18 +40,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void) {
-	const char *input_string = "Hello, World!";
-
-	char *result = ft_strmapi(input_string, ft_ftest);
-
-
-	printf("Chaîne d'origine : %s\n", input_string);
-	printf("Nouvelle chaîne   : %s\n", result);
-
-	free(result);
-
-	return (0);
-}
-*/
+// int main ()
+// {
+// 	char *s = NULL;
+// 	char *d = ft_strmapi(s, ft_ftest);
+// 	printf("%s",d);
+// }

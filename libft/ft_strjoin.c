@@ -48,3 +48,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strcat(ptr, (char *)s2);
 	return (ptr);
 }
+
+// int main ()
+// {
+// 	char *s1 = "Mohamed";
+// 	char *s2 = " Amine";
+// 	char *str = ft_strjoin(s1, s2);
+// 	printf("%s",str);
+// 	free(str);
+// }

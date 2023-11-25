@@ -77,6 +77,12 @@ char	*ft_itoa(int n)
 	return (ptr);
 }
 
+// int main()
+// {
+// 	int a = 2147483647;
+// 	char *str = ft_itoa(a);
+// 	printf("%s",str);
+// }
 // #include "libft.h"
 
 // static int	ft_count(int n)

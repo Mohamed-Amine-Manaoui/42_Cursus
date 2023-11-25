@@ -36,3 +36,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+// int main ()
+// {
+// 	char big[] = "Mohamed Amine";
+// 	char little[] = "mi";
+// 	char *str = ft_strnstr(big, little,sizeof(big));
+// 	printf("%s",str);
+// }

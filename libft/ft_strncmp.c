@@ -25,3 +25,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
+// int main ()
+// {
+// 	char *s1 = "amine";
+// 	char *s2 = "bmine";
+// 	int a = ft_strncmp(s1,s2,3);
+// 	printf("%d",a);
+// }

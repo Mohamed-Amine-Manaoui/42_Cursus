@@ -19,7 +19,7 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)(str + i));
 		i++;
 	}
@@ -27,3 +27,11 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)(str + i));
 	return (0);
 }
+
+// int main()
+// {
+// 	char *str = "";
+// 	char chr = '\0';
+// 	char *ptr = strchr(str,chr);
+// 	printf("%s",ptr);
+// }

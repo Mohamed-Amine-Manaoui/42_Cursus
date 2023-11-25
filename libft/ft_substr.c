@@ -34,3 +34,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+// int main ()
+// {
+// 	char s[] = "Mohamed";
+// 	char *ptr = ft_substr(s, 0, 5);
+// 	printf("%s",ptr);
+// }

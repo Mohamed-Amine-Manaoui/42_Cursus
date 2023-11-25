@@ -14,14 +14,30 @@
 
 void	*ft_calloc(size_t num, size_t size)
 {
-	int	*ptr;
+	void	*ptr;
+	size_t	total_s;
 
-	if (size * num / size != num && size != 0)
-		return (0);
+	total_s = num * size;
+	if (size != 0 && total_s / size != num)
+		return (NULL);
 	ptr = malloc(size * num);
 	if (ptr == NULL)
-		return NULL;
+		return (NULL);
 	if (ptr != 0)
 		ft_bzero(ptr, size * num);
 	return (ptr);
 }
+// int main()
+// {
+// 	size_t num = 0;
+// 	size_t size = 0;
+
+// 	int *str = (int *)ft_calloc(num, size);
+// 	if (str != NULL)
+// 	{
+// 		printf("True");
+// 		free(str);
+// 	}
+// 	else 
+// 		printf("False");
+// }
